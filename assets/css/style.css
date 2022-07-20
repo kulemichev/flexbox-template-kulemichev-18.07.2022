@@ -375,6 +375,160 @@ p {
           margin-inline-end: 0px;
 }
 
+.header {
+  overflow: hidden;
+  min-height: 100px;
+  margin-bottom: 30px;
+  border-radius: 0 0 7px 7px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-logo__image {
+  display: block;
+}
+
+.header-logo__title {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #eeeeee;
+  font-family: "Lora", serif;
+  font-weight: 300;
+}
+
+.header-logo__description {
+  display: block;
+  text-align: center;
+  color: #eeeeee;
+}
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.header-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-menu__list.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-menu__list-item a {
+  display: block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.header-menu__list-item a:hover,
+.header-menu__list-item a:focus {
+  color: #e12727;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+}
+
+.header-menu__list-item.active a {
+  color: #bb1a1a;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+}
+
+.header-menu__btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header-menu__btn-row {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  margin: 2px 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #eeeeee;
+}
+
+.header-menu__btn.active .header-menu__btn-row:first-child {
+  top: 6px;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.header-menu__btn.active .header-menu__btn-row:last-child {
+  top: -6px;
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+.header-menu__btn.active .header-menu__btn-row:nth-child(2) {
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .header-logo {
+    padding: 45px 15px;
+  }
+  .header-logo__image {
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+  .header-logo__title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .header-logo__description {
+    letter-spacing: 0.2em;
+    font-weight: 700;
+  }
+}
+
 @media (min-width: 1200px) {
   body body {
     padding: 0 30px;
@@ -384,5 +538,52 @@ p {
 @media (max-width: 1199.8px) {
   body body {
     padding: 0 15px;
+  }
+}
+
+@media (max-width: 767.8px) {
+  .header-logo {
+    padding: 30px 15px;
+  }
+  .header-logo__description {
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    line-height: 1.25em;
+  }
+}
+
+@media (max-width: 767.8px) and (min-width: 480px) {
+  .header-logo__image {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+  .main-content-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .header-logo__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .main-content__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .header-logo__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 479.8px) {
+  .header-logo__image {
+    width: 80%;
+    margin-bottom: 15px;
   }
 }
