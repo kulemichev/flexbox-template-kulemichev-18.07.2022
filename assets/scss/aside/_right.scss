@@ -1,3 +1,26 @@
 .right {
   order: 3;
 }
+@media (min-width: $lg) {
+  .right {
+    flex: 0 0 240px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1199.8px) and (min-width: $md) {
+  .right {
+    width: 100%;
+  }
+}
+@media (max-width: 991.8px) and (min-width: $xs) {
+  .right {
+    width: 50%;
+    padding-left: 7.5px;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .right {
+    width: 100%;
+  }
+}

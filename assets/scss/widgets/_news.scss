@@ -1,29 +1,24 @@
 .widget-news__item-wrapper {
   display: flex;
   flex-wrap: wrap;
-
   margin: 0 -15px 7.5px;
   padding: 0 15px 7.5px;
 }
 .widget-news__item-title {
   display: block;
   overflow: hidden;
-
   width: 100%;
   margin: 0 0 10px;
   transition: color 0.5s;
   white-space: nowrap;
   letter-spacing: 1px;
   text-overflow: ellipsis;
-
   font-weight: 300;
 }
 .widget-news__item-image {
   overflow: hidden;
-
   width: 75px;
   height: 75px;
-
   border-radius: 4px;
 }
 .widget-news__item-image img {
@@ -31,25 +26,22 @@
 }
 .widget-news__item-excerpt {
   overflow: hidden;
-
   width: calc(100% - 75px);
   max-height: 75px;
   padding-left: 10px;
   transition: color 0.5s;
-
-  color: #cccccc;
-
+  color: $color-gray;
   font-size: 13px;
   line-height: 19px;
 }
 .widget-news__item a:hover h4 {
-  text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
+  text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
 }
 .widget-news__item a:hover img {
   transform: scale(1.2);
 }
 .widget-news__item a:hover .widget-news__item-excerpt {
-  color: #eeeeee;
+  color: $color-light;
 }
 .widget-news__item a:hover .widget-news__item-wrapper {
   background: radial-gradient(
@@ -57,4 +49,9 @@
     rgba(0, 0, 0, 0.65) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+@media (min-width: 1200px) {
+  .right .widget-news {
+    width: 240px;
+  }
 }

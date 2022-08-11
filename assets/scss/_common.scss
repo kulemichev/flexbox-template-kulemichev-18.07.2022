@@ -1,93 +1,70 @@
 * {
   box-sizing: border-box;
 }
-
 html {
-  line-height: 1.15;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: $font-main;
+  font-size: $font-size;
   line-height: 1.5em;
 }
-
 body {
-  margin: 0;
   overflow-x: hidden;
   width: 100%;
-  max-width: 1380px;
+  max-width: $xl;
   margin: 0 auto;
-
   transition: opacity 1s ease 0s;
-
   opacity: 1;
-  background-color: #d8b036;
+  background-color: $color-warning;
   background-image: url("../img/global-bg.jpg");
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
-
-  @media (min-width: 1200px) {
-    body {
-      padding: 0 30px;
-    }
-  }
-  @media (max-width: 1199.8px) {
-    body {
-      padding: 0 15px;
-    }
-  }
 }
-
 h1 {
   margin: 0.67em 0;
-
   font-size: 2em;
 }
-
 a {
   text-decoration: none;
   background-color: transparent;
-  color: #eeeeee;
+  color: $color-light;
 }
 a:hover,
 a:focus {
-  color: #e12727;
+  color: $color-accent;
 }
-
 p {
-  color: #cccccc;
+  color: $color-gray;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-
+.container {
+  display: flex;
+}
 img {
   border-style: none;
 }
-
+.img-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 strong {
   font-weight: bolder;
 }
-
-ul {
-  // display: block;
-  // list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
-
-@media (min-width: 1200px) {
+@media (min-width: $lg) {
   body {
-    padding: 0 30px;
+    padding: 0 $gap;
   }
-
-  @media (max-width: 1199.8px) {
-    body {
-      padding: 0 15px;
-    }
+}
+@media (max-width: 1199.8px) {
+  body {
+    padding: 0 15px;
+  }
+  .container {
+    flex-wrap: wrap;
   }
 }

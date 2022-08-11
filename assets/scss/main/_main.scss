@@ -2,3 +2,22 @@
   flex-grow: 1;
   order: 2;
 }
+@media (min-width: $lg) {
+  .main {
+    flex: 0 0 calc(100% - 220px - 240px);
+    padding-right: $gap;
+    padding-left: $gap;
+  }
+}
+@media (max-width: 1199.8px) and (min-width: $md) {
+  .main {
+    flex: 0 0 calc(100% - 220px);
+    padding-right: 0;
+    padding-left: $gap;
+  }
+}
+@media (max-width: 991.8px) {
+  .main {
+    order: 1;
+  }
+}

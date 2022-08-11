@@ -1,13 +1,10 @@
 .main-breadcrumb {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: $gap;
   padding: 8px 12px;
-
   text-align: right;
   letter-spacing: 2px;
-
   border-radius: 7px;
-
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
@@ -22,13 +19,10 @@
 }
 .main-breadcrumb span {
   position: relative;
-
   margin-right: 7px;
-
   color: #cccccc;
 }
 .main-breadcrumb i {
   color: #cccccc;
-
   font-weight: bold;
 }
