@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="touch-action: none;">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -10,21 +10,25 @@
   <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
-  <!-- <style>body {opacity: 0; background-color: #d8b036;} html {overflow: hidden;}</style> -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      opacity: 0;
+      background-color: #d8b036;
+    }
+
+    html {
+      overflow: hidden;
+    }
+  </style>
 </head>
 
-<body style="overflow: hidden; cursor: grab;">
-  <script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.27.10'><\/script>".replace("HOST", location.hostname));
-//]]></script>
-  <script async="" src="/browser-sync/browser-sync-client.js?v=2.27.10"></script>
+<body>
 
   <header class="header">
     <div class="header-logo">
-      <img class="header-logo__image" src="assets/img/logo.png" alt="Logo three stripes"></img>
+      <img class="header-logo__image" src="assets/img/logo.png" alt="">
       <strong class="header-logo__title">FLEXBOX TEMPLATE</strong>
-      <span class="header-logo__description">Шаблон с применением flexbox для первого модуля, курса Front-end Web
+      <span class="header-logo__description">Шаблон с применением flexbox для первого модуля, курса&nbsp;Front-end Web
         Development</span>
     </div>
 
@@ -35,21 +39,11 @@
         <div class="header-menu__btn-row"></div>
       </div>
       <ul class="header-menu__list">
-        <li class="header-menu__list-item active">
-          <a href="#">Главная</a>
-        </li>
-        <li class="header-menu__list-item">
-          <a href="#">Страница</a>
-        </li>
-        <li class="header-menu__list-item">
-          <a href="#">Запись</a>
-        </li>
-        <li class="header-menu__list-item">
-          <a href="#">Контакты</a>
-        </li>
-        <li class="header-menu__list-item">
-          <a href="#">О нас</a>
-        </li>
+        <li class="header-menu__list-item active"><a href="#">Главная</a></li>
+        <li class="header-menu__list-item"><a href="#">Страница</a></li>
+        <li class="header-menu__list-item"><a href="#">Запись</a></li>
+        <li class="header-menu__list-item"><a href="#">Контакты</a></li>
+        <li class="header-menu__list-item"><a href="#">О нас</a></li>
       </ul>
     </nav>
   </header>
@@ -57,11 +51,9 @@
   <div class="container">
     <main class="main">
       <div class="main-breadcrumb">
-        <span><a href="#"></a>Главная</span>
-        <i class="fas fa-caret-right"></i>
-        <span><a href="#"></a>Раздел</span>
-        <i class="fas fa-caret-right"></i>
-        <span><a href="#"></a>Страница</span>
+        <span><a href="#">Главная</a></span><i class="fas fa-caret-right"></i>
+        <span><a href="#">Раздел</a></span><i class="fas fa-caret-right"></i>
+        <span>Страница</span>
       </div>
 
       <div class="main-content">
@@ -80,7 +72,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -93,7 +84,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -106,7 +96,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -119,7 +108,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -132,7 +120,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -145,7 +132,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -158,7 +144,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -171,7 +156,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -184,7 +168,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -197,7 +180,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -210,7 +192,6 @@
               </a>
             </div>
           </div>
-
           <div class="main-content-item">
             <div class="main-content-item__wrapper">
               <a href="#">
@@ -227,18 +208,29 @@
         </div>
       </div>
     </main>
+
     <aside class="left">
+      <div class="widget widget-search">
+        <h3>Поиск по сайту</h3>
+        <form method="get" action="#">
+          <input class="widget-search__input" type="text" placeholder="Введите текст...">
+          <button class="widget-search__submit" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
       <div class="widget widget-categories">
         <h3>Категории</h3>
-        <ul>
+        <ul class="widget-categories__list">
           <li class="widget-categories__item"><a href="#">HTML4 / HTML5</a></li>
-          <li class="widget-categories__item"><a href="#"></a>CSS2 / CSS3</li>
-          <li class="widget-categories__item"><a href="#"></a>Javascript / Jquery</li>
-          <li class="widget-categories__item"><a href="#"></a>PHP / MySQL</li>
-          <li class="widget-categories__item"><a href="#"></a>Less / Sass / Scss</li>
-          <li class="widget-categories__item"><a href="#"></a>Wordpress</li>
-          <li class="widget-categories__item"><a href="#"></a>Drupal</li>
-          <li class="widget-categories__item"><a href="#"></a>Bootstrap</li>
+          <li class="widget-categories__item"><a href="#">CSS2 / CSS3</a></li>
+          <li class="widget-categories__item"><a href="#">Javascript / Jquery</a></li>
+          <li class="widget-categories__item"><a href="#">PHP / MySQL</a></li>
+          <li class="widget-categories__item"><a href="#">Less / Sass / Scss</a></li>
+          <li class="widget-categories__item"><a href="#">Wordpress</a></li>
+          <li class="widget-categories__item"><a href="#">Drupal</a></li>
+          <li class="widget-categories__item"><a href="#">Bootstrap</a></li>
         </ul>
       </div>
 
@@ -253,14 +245,16 @@
       <div class="widget widget-news">
         <h3>Новые статьи</h3>
         <div class="widget-news__content">
-          <div class="widget-news__content-item">
+          <div class="widget-news__item">
             <a href="#">
               <div class="widget-news__item-wrapper">
                 <h4 class="widget-news__item-title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
                 <div class="widget-news__item-image">
                   <img class="img-responsive" src="assets/img/samples/100x100___1.jpg" alt="news item">
                 </div>
-                <div class="widget-news__item-excerpt"></div>
+                <div class="widget-news__item-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error,
+                  omnis quam! Aliquid architecto asperiores atque blanditiis error, ipsum magni maxime molestias,
+                  mollitia neque odit quam quia reiciendis sed velit veritatis.</div>
               </div>
             </a>
           </div>
@@ -334,83 +328,57 @@
               </div>
             </a>
           </div>
-
         </div>
       </div>
-
     </aside>
+  </div>
 
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-top__item">
-          <div class="widget">
-            <h3>Заголовок виджета</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum facere minus officia porro. Atque
-              ducimus excepturi illo ipsa, nam necessitatibus odit recusandae unde! Eligendi harum itaque minima quis.
-              Labore.</p>
-          </div>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-top__item">
+        <div class="widget">
+          <h3>Заголовок виджета</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum facere minus officia porro. Atque ducimus
+            excepturi illo ipsa, nam necessitatibus odit recusandae unde! Eligendi harum itaque minima quis. Labore.</p>
         </div>
-
-        <div class="footer-top__item">
-          <div class="widget">
-            <h3>Заголовок виджета</h3>
-            <p>Lorem esse eveniet fugit ipsum labore molestiae mollitia nesciunt, nulla quae similique, tempore tenetur
-              vel.</p>
-          </div>
+      </div>
+      <div class="footer-top__item">
+        <div class="widget">
+          <h3>Заголовок виджета</h3>
+          <p>Lorem esse eveniet fugit ipsum labore molestiae mollitia nesciunt, nulla quae similique, tempore tenetur
+            vel.</p>
         </div>
-
-        <div class="footer-top__item">
-          <div class="widget">
-            <h3>Заголовок виджета</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, modi officiis. Adipisci consectetur
-              deleniti dolorem dolorum ducimus esse laborum nam natus nobis officiis perferendis, qui rem sapiente, sed
-              totam voluptatibus.</p>
-          </div>
-        </div>
-
+      </div>
+      <div class="footer-top__item">
         <div class="widget">
           <h3>Заголовок виджета</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, modi officiis. Adipisci consectetur
             deleniti dolorem dolorum ducimus esse laborum nam natus nobis officiis perferendis, qui rem sapiente, sed
             totam voluptatibus.</p>
         </div>
-
-        <div class="footer-top__item">
-          <div class="widget">
-            <h3>Заголовок виджета</h3>
-            <p>Accusantium, ad, beatae dignissimos dolorem doloremque ducimus est illo libero magnam numquam obcaecati
-              officia officiis omnis perspiciatis, provident repellat sapiente suscipit tenetur!</p>
-          </div>
-        </div>
       </div>
-
-      <div class="footer-bottom">
+      <div class="footer-top__item">
         <div class="widget">
           <h3>Заголовок виджета</h3>
-          <p>Обычный текст виджета...</p>
+          <p>Accusantium, ad, beatae dignissimos dolorem doloremque ducimus est illo libero magnam numquam obcaecati
+            officia officiis omnis perspiciatis, provident repellat sapiente suscipit tenetur!</p>
         </div>
       </div>
-
-    </footer>
-
-
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/jquery.nicescroll/jquery.nicescroll.js"></script>
-    <script src="assets/js/main.js"></script>
-
-  </div>
-  <div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr"
-    style="width: 8px; z-index: auto; cursor: grab; position: fixed; top: 0px; height: 100%; right: 0px; touch-action: none; opacity: 0;">
-    <div class="nicescroll-cursors"
-      style="position: relative; top: 37px; float: right; width: 6px; height: 111px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; touch-action: none;">
     </div>
-  </div>
-  <div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr"
-    style="height: 8px; z-index: auto; position: fixed; left: 0px; width: 100%; bottom: 0px; display: none; opacity: 0;">
-    <div class="nicescroll-cursors"
-      style="position: absolute; top: 0px; height: 6px; width: 915px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; left: 0px;">
+
+    <div class="footer-bottom">
+      <div class="widget">
+        <h3>Заголовок виджета</h3>
+        <p>Обычный текст виджета...</p>
+      </div>
     </div>
-  </div>
+  </footer>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/jquery.nicescroll/jquery.nicescroll.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

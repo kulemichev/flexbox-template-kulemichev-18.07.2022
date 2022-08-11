@@ -79,3 +79,15 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 1199.8px) {
+    body {
+      padding: 0 15px;
+    }
+  }
+}
